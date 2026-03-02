@@ -5,6 +5,7 @@ import { registerCreateDiagramTool } from "./tools/create-diagram.js";
 import { registerExportDiagramTool } from "./tools/export-diagram.js";
 import { registerGetDiagramTool } from "./tools/get-diagram.js";
 import { registerListStylesTool } from "./tools/list-styles.js";
+import { registerRemoveElementsTool } from "./tools/remove-elements.js";
 import { registerUpdateElementsTool } from "./tools/update-elements.js";
 
 const SERVER_NAME = "drawio-mcp";
@@ -22,6 +23,7 @@ export function createServer(): McpServer {
   registerExportDiagramTool(server);
   registerGetDiagramTool(server);
   registerListStylesTool(server);
+  registerRemoveElementsTool(server);
   registerUpdateElementsTool(server);
 
   return server;
