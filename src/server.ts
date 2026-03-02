@@ -1,4 +1,5 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+import { registerCreateDiagramTool } from "./tools/create-diagram.js";
 import { registerExportDiagramTool } from "./tools/export-diagram.js";
 import { registerListStylesTool } from "./tools/list-styles.js";
 
@@ -11,6 +12,7 @@ export function createServer(): McpServer {
     version: SERVER_VERSION,
   });
 
+  registerCreateDiagramTool(server);
   registerExportDiagramTool(server);
   registerListStylesTool(server);
 
