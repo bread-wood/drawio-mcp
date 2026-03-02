@@ -1,6 +1,7 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { registerCreateDiagramTool } from "./tools/create-diagram.js";
 import { registerExportDiagramTool } from "./tools/export-diagram.js";
+import { registerGetDiagramTool } from "./tools/get-diagram.js";
 import { registerListStylesTool } from "./tools/list-styles.js";
 
 const SERVER_NAME = "drawio-mcp";
@@ -14,6 +15,7 @@ export function createServer(): McpServer {
 
   registerCreateDiagramTool(server);
   registerExportDiagramTool(server);
+  registerGetDiagramTool(server);
   registerListStylesTool(server);
 
   return server;
