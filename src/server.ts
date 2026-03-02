@@ -1,4 +1,5 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+import { registerAddConnectionsTool } from "./tools/add-connections.js";
 import { registerAddElementsTool } from "./tools/add-elements.js";
 import { registerCreateDiagramTool } from "./tools/create-diagram.js";
 import { registerExportDiagramTool } from "./tools/export-diagram.js";
@@ -14,6 +15,7 @@ export function createServer(): McpServer {
     version: SERVER_VERSION,
   });
 
+  registerAddConnectionsTool(server);
   registerAddElementsTool(server);
   registerCreateDiagramTool(server);
   registerExportDiagramTool(server);
