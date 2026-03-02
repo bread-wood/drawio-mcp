@@ -1,0 +1,32 @@
+{
+  "name": "drawio-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for creating and editing Draw.io diagrams",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "drawio-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix"
+  },
+  "keywords": ["mcp", "drawio", "diagrams", "model-context-protocol"],
+  "author": "bread-wood",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "fast-xml-parser": "^5.2.3",
+    "zod": "^3.24.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.1"
+  }
+}
